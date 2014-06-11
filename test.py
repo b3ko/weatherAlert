@@ -1,5 +1,4 @@
 #!/usr/bin/python
-import config
 import smtplib
 from email.mime.text import MIMEText
 import urllib2
@@ -7,6 +6,7 @@ import json
 import MySQLdb
 import MySQLdb.cursors
 import sys
+import config
 
 db = MySQLdb.connect (host = config.host, user = config.user, passwd = config.passwd, db = config.db, cursorclass=MySQLdb.cursors.DictCursor)
 cursor = db.cursor()
@@ -32,7 +32,7 @@ for zip in zips :
 	cursor.execute("select concat(u.mobile, '@', cl.domain) as number from carrier_lkp cl \
 		left outer join users u on u.carrier_id = cl.carrier_id \
 		left outer join zipsForUser z on z.user_id = u.user_id \
-		where z.zipcode = %s" % zip)
+		where z.zipcode = %s and isActive = 1" % zip)
 	recipients = []
 	rows = cursor.fetchall()
 	for row in rows :
