@@ -28,6 +28,7 @@ echo <<<_END
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="dist/js/bootstrap.min.js"></script>
 	
   </head>
 
@@ -43,7 +44,7 @@ echo <<<_END
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="test.php">Weather Alert</a>
+          <a class="navbar-brand" href="register.php">Weather Alert</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
