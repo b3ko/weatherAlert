@@ -17,7 +17,7 @@ to do:
 - add a severe weather alert feature
 - add a schedule choice
 - look into how to get a "stop" reply via sms to unscribe someone
-- fix the wunderground logo so it doesn't look like horrible/follows their usage guidelines
+- fix the wunderground logo so it doesn't look horrible/follows their usage guidelines
 - add validation for registration input 
 - add some "marketing" messaging to the page
 - ads?
