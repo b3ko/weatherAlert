@@ -10,7 +10,7 @@ echo <<<_END
     <meta name="author" content="">
     <link rel="shortcut icon" href="img/favicon.jpg">
 
-    <title>Weather Alert</title>
+    <title>register - weather alert</title>
 
     <!-- Bootstrap core CSS -->
     <link href="dist/css/bootstrap.css" rel="stylesheet">
@@ -47,7 +47,7 @@ echo <<<_END
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-			<li><a href="http://www.wunderground.com/?apiref=6db4bfbeb2699000"><img src="wundergroundLogo_4c_horz.jpg"></a><li>
+			<li><a href="http://www.wunderground.com/?apiref=6db4bfbeb2699000"><img src="wundergroundLogo_4c_horz.jpg" alt="weatherunderground.com"></a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>

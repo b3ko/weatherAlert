@@ -1,44 +1,39 @@
  <?php
+require_once 'config/db_login.php';
+require 'header.php';
  echo <<<_END
-	<html>
-	<head>
-		<title>register - weather alert</title>
-	</head>
-	<body>
 		<div class="container">
-			<form method="POST" class="form-horizontal" role="form" method="register.php">
+			<form method="POST" class="form-horizontal" role="form" action="register.php">
 			
-			<div class="form-group">
-				<label for="email">Email address:</label>
-				<input type="email" class="form-control" name="email" placeholder="you@email.com">
-			</div>
-			<div class="form-group">	
-				<label for="carrier">Mobile carrier:</label>
-				<select class="form-control" name="carrier">
-					<option value="" disabled selected>Select your carrier</option>
-					<option value="att">AT&T</option>
-					<option value="Verizon">Verizon</option>
-					<option value="Sprint">Sprint</option>
-					<option value="TMobile">T-Mobile</option>
-				</select>
-			</div>
-			<div class="form-group">
-				<label for="mobile">Mobile Phone Number:</label>
-				<input type="text" class="form-control" name="mobile" placeholder="555-867-5309">
-			</div>
-			<div class="form-group">
-				<label for="zip">Zipcode:</label>
-				<input type="text" class="form-control" name="zip" placeholder="01234">
-			</div>
+				<div class="form-group">
+					<label for="email">Email address:</label>
+					<input type="email" class="form-control" name="email" id="email" placeholder="you@email.com">
+				</div>
+				<div class="form-group">	
+					<label for="carrier">Mobile carrier:</label>
+					<select class="form-control" name="carrier" id="carrier">
+						<option value="" disabled selected>Select your carrier</option>
+						<option value="att">AT&amp;T</option>
+						<option value="Verizon">Verizon</option>
+						<option value="Sprint">Sprint</option>
+						<option value="TMobile">T-Mobile</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="mobile">Mobile Phone Number:</label>
+					<input type="text" class="form-control" name="mobile" id="mobile" placeholder="555-867-5309">
+				</div>
+				<div class="form-group">
+					<label for="zip">Zipcode:</label>
+					<input type="text" class="form-control" name="zip" id="zip" placeholder="01234">
+				</div>
 
-			<div class="form-group">
-				<input type="submit" class="btn btn-primary btn-block"/>
-			</div>
-			
+				<div class="form-group">
+					<input type="submit" class="btn btn-primary btn-block"/>
+				</div>
+			</form>
 		</div>
 _END;
-	require_once 'config/db_login.php';
-	require 'header.php';
 	$db_server = mysql_connect($db_hostname, $db_username, $db_password);
 	
 	if(!$db_server) die("unable to connect to mySql: " . mysql_error());
